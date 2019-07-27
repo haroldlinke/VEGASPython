@@ -21,9 +21,9 @@ The extension provides two options:
 
 if you want to test VEGASPython you need following items:
 
-  Magix VEGAS Pro - https://www.vegascreativesoftware.com/gb/vegas-pro/product-comparison/
+      Magix VEGAS Pro: https://www.vegascreativesoftware.com/gb/vegas-pro/product-comparison/
 
-  VEGASPython: https://www.hlinke.de/dokuwiki/doku.php?id=en:vegas_python_download
+      VEGASPython: https://www.hlinke.de/dokuwiki/doku.php?id=en:vegas_python_download
 
 Unfortunately the complete ZIP file is too big to be provided in GITHUB.
 All file from the ZIP file are available here except a complete Python37 installation includeing NumPy and OpenCV for python.
@@ -47,8 +47,8 @@ A VEGAS dockable window opens. The window can float over VEGAS or can be integra
 
 The VEGASPython window shows two textboxes:
 
-  * Input PYTHON Commands
-  * Output
+  - Input PYTHON Commands
+  - Output
  
 and a menu with two items "File" and "Execute VEGASPython Script".
 
@@ -62,7 +62,7 @@ VEGASPython is based on Python 3.7.3 and PythonNet.
 The VEGAS API can be accessed directly by using the build-in variable "pyVEGAS".
 All VEGAS API items are available.
 
-===== Examples =====
+### Examples ###
 Example for a simple script that can be used in the interactive window:
 
     import clr
@@ -83,6 +83,7 @@ Example for a simple script that can be used in the interactive window:
 
 
 ----
+
 VEGAS also supports extension scripts that can be called via the VEGAS user interface or a shortcut key.
 A script that should be used as an extension needs to be included in a function FromVegas. See example below.
 
@@ -107,7 +108,7 @@ A script that should be used as an extension needs to be included in a function 
 ## Python Debugging
 
 VEGASPython is embedded in VEGAS. This can create issues for some Python debuggers.
-I am using the WING Python IDE [[https://wingware.com/]].
+I am using the WING Python IDE https://wingware.com/.
 There is a free version (WING IDE Personal) for non-comercial use and a professional version available. 
 Other debuggers may work as well, but I have not tested them.
 If you have experience with another debugger, please inform me and I will add this information to this chapter.
@@ -133,16 +134,16 @@ This file provides important config parameters to support the debugging:
 
 This is the content of the file:
 
-  {
-
       {
-      "PythonPath": "",
-      "debugmode": false,
-      "debugprecmd": "import wingdbstub;print ('Wing Debug started')",
-      "debugpostcmd": "print ('Debug ended')",
-      "debugusereload": true
+
+          {
+          "PythonPath": "",
+          "debugmode": false,
+          "debugprecmd": "import wingdbstub;print ('Wing Debug started')",
+          "debugpostcmd": "print ('Debug ended')",
+          "debugusereload": true
+          }
       }
-  }
 
 If you are familiar with JSON files you will know that the structure has to be maintained. Otherwise the parameters will not be recognized any more. Change value only between the "" or change true to false or viceversa.
 
@@ -159,18 +160,18 @@ If the parameter is empty
 
 Do not forget to double "\" in the Path.
 
-## debugmode
+#### debugmode
 debugmode is the main switch for the debugging parameters.
 
   "debugmode": false
 
-    The debug parameters are ignored
+  The debug parameters are ignored
 
   "debugmode": true
 
-    The debug parameters are used.
+  The debug parameters are used.
 
-## debugprecmd 
+#### debugprecmd 
 
 Defines Python commands that need to be executed before the start of the Python script.
 Here you can add commands that are needed by the debugger to start the debugging and connect with the embedded Python interpreter.
@@ -179,9 +180,9 @@ Example:
 
   "debugprecmd": "import wingdbstub;print ('Wing Debug started')"
 
-    Imports the wingdbstub.py that is needed by WING Python IDE to start the debugging. You can remove this when you do not use WING Python IDE.
+  Imports the wingdbstub.py that is needed by WING Python IDE to start the debugging. You can remove this when you do not use WING Python IDE.
 
-## debugpostcmd 
+#### debugpostcmd 
 
 Defines Python commands that need to be executed after the end of the Python script.
 Here you can add commands that are needed by the debugger to stop the debugging.
@@ -190,7 +191,7 @@ Example:
 
   "debugpostcmd": "print ('Debug ended')"
 
-## debugusereload 
+#### debugusereload 
 
 As explained above you need to restart VEGAS after any change in the Python script.
 
