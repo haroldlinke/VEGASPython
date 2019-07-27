@@ -1,0 +1,8 @@
+{
+    "PythonPath": "",
+    "VEGASPythonFolder": "\\VEGASPython_PN",
+    "debugmode": true,
+    "debugprecmd": "import wingdbstub;print ('Wing Debug started')",
+    "debugpostcmd": "print ('Debug ended')",
+    "debugusereload": true
+}
