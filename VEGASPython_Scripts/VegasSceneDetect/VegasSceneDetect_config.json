@@ -1,0 +1,11 @@
+{
+    "useHSV": true,
+    "showPreview": true,
+    "PreviewFrameSkip": 100,
+    "showFrameValues": false,
+    "threshold": 30,
+    "processMediaPool": true,
+    "processTimeline": true,
+    "progressBarLightness": 255,
+    "minSceneLength": 15
+}
